@@ -1,19 +1,22 @@
-pipeline{
-	agent any
-	stages{
-		stage('Build'){
-			echo 'Build'
-		}
-		stage('Deploy'){
-			echo 'Deploy'
-		}
-		stage('Test'){
-			echo 'Test'
-		}
-		stage('Release'){
-			echo 'Release'
-		}
-	}
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building the Project..........'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing the Project..........'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying the Project..........'
+            }
+        }
+    }
 	post{
 		always{
 		echo 'always'
